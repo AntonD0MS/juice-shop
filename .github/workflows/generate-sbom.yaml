@@ -3,7 +3,8 @@ name: Generate SBOM
 on:
   push:
     branches:
-      - main # of de branch die je gebruikt
+      - main # De workflow draait automatisch bij pushes naar de main branch
+  workflow_dispatch: {} # Dit voegt de "Run workflow" knop toe in de GitHub UI
 
 jobs:
   generate-sbom:
