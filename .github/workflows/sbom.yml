@@ -25,7 +25,7 @@ jobs:
 
       - name: Generate SBOM
         run: cyclonedx-cli scan --input-file package.json --output-file sbom.json --type application --format json --output-format cyclonedx
-          # Let op: De bovenstaande command probeert een SBOM te genereren op basis van package.json.
+        # Let op: De bovenstaande command probeert een SBOM te genereren op basis van package.json.
         # Voor een complete SBOM van een Node.js project zou je ook de installed packages kunnen scannen.
         # Een alternatieve benadering zou zijn:
         # - run: npx @cyclonedx/cyclonedx-npm --output-file sbom.json
