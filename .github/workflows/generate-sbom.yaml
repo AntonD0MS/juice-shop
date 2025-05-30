@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Install CycloneDX CLI # Naam van de stap blijft hetzelfde, commando verandert
-            run: npm install -g @cyclonedx/bom # <-- HIER IS DE WIJZIGING
+        run: npm install -g @cyclonedx/bom # <-- HIER IS DE WIJZIGING (indentatie gecorrigeerd)
 
       - name: Generate SBOM
         run: cyclonedx-cli scan --input-file package.json --output-file sbom.json --type application --format json --output-format cyclonedx
