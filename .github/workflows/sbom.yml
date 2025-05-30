@@ -25,9 +25,12 @@ jobs:
       - name: Generate SBOM
         run: cyclonedx-bom -o sbom.json
 
-      - name: Upload SBOM artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: sbom
-          path: sbom.json
+      - name: Print SBOM to logs
+        run: |
+          echo "=== SBOM OUTPUT ==="
+          cat sbom.json
+
+      - name: Zip SBOM
+        run: zip sbom.zip sbom.json
+
 
